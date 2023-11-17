@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prototype</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Menu của trang -->
+        <div class="s-header">
+            <div class="container">
+                <div class="b-topheader">
+                    <div class="b-brandname">
+                        <p>Larana Toy Store</p>
+                    </div>
+                    <div class="b-logo">
+                        <img src="toy store logo.png" onclick="showPage('index')" />
+                    </div>
+                    <div class="b-function">
+                        <div class="b-search">
+                            <input type="text" placeholder="Tìm kiếm sản phẩm" />
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="b-cart" onclick="showPage('cart')">
+                            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                            <div class="b-cart-amount"><span>1</span></div>
+                            <div class="b-cart-hover">
+                                <p class="note" style="display: block">Giỏ hàng trống</p>
+                                <!-- <div class="b-cart-content"> -->
+                                <!-- <img src="img/gallery/gallery-1.jpeg" alt="" />
+                                    <div class="b-cart-text">
+                                        <p>ALP Brown Handbags</p>
+                                        <p class="price">$ <span>800</span></p>
+                                    </div>
+                                </div>
+                                <div class="b-cart-content">
+                                    <img src="img/gallery/gallery-1.jpeg" alt="" />
+                                    <div class="b-cart-text">
+                                        <p>ALP Brown Handbags</p>
+                                        <p class="price">$ <span>800</span></p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="b-account">
+                            <i class="fa-sharp fa-solid fa-user user" style="display: none"></i>
+                            <i class="fa-solid fa-right-to-bracket login" onclick="showPage('login')"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-botheader">
+                    <div class="b-logo">
+                        <img src="img/logo/ALP - Logofull final.png" onclick="showPage('index')" />
+                    </div>
+                    <div class="b-menu">
+                        <ul>
+                            <li><a href="index.html">TRANG CHỦ</a></li>
+                            <li>
+                                <a href="shop.html">CỬA HÀNG</a>
+                                <ul class="b-submenu">
+                                    <li><a href="shop.html">ĐỒ CHƠI MÔ HÌNH</a></li>
+                                    <li><a href="shop.html">ĐỒ CHƠI XẾP HÌNH</a></li>
+                                    <li><a href="shop.html">ĐỒ CHƠI THỂ THAO</a></li>
+                                    <li><a href="shop.html">THỦ CÔNG MỸ THUẬT</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">VỀ CHÚNG TÔI</a></li>
+                            <li><a href="contact.html">LIÊN HỆ</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="b-function">
+                        <div class="b-cart" onclick="showPage('cart')">
+                            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                            <div class="b-cart-amount"><span>1</span></div>
+                            <div class="b-cart-hover">
+                                <p class="note" style="display: none">Your cart is empty</p>
+                                <div class="b-cart-content" onclick="showPage('cart')">
+                                    <img src="img/gallery/gallery-1.jpeg" alt="" />
+                                    <div class="b-cart-text">
+                                        <p>ALP Brown Handbags</p>
+                                        <p class="price">$ <span>800</span></p>
+                                    </div>
+                                </div>
+                                <div class="b-cart-content">
+                                    <img src="img/gallery/gallery-1.jpeg" alt="" />
+                                    <div class="b-cart-text">
+                                        <p>ALP Brown Handbags</p>
+                                        <p class="price">$ <span>800</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-account">
+                            <i class="fa-sharp fa-solid fa-user user" style="display: none"></i>
+                            <i class="fa-solid fa-right-to-bracket login" onclick="showPage('login')"></i>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Headbanner của trang -->
+        <div class="s-headbanner">
+            <div class="b-slide">
+                <div class="b-banner-slide">
+                    <div class="b-banner-img">
+                        <img src="banner1.jpg" alt="" />
+                    </div>
+                    <div class="b-content">
+                        <h2><span>Sản phẩm mới</span> ĐỒ CHƠI XẾP HÌNH</h2>
+                        <p>Bộ đồ chơi xếp hình đã ra mắt. <a href="">Khám phá ngay!</a></p>
+                        <button class="c-btn1" onclick="showPage('shop')"><span>MUA NGAY</span></button>
+                    </div>
+                </div>
+                <div class="b-banner-slide">
+                    <div class="b-banner-img">
+                        <img src="img/headbanner/hdbanner2.webp" alt="" />
+                    </div>
+                    <div class="b-content">
+                        <h2><span>Sản phẩm mới</span> ĐỒ CHƠI XẾP HÌNH</h2>
+                        <p>Bộ đồ chơi xếp hình đã ra mắt. <a href="">Khám phá ngay!</a></p>
+                        <button class="c-btn1" onclick="showPage('shop')"><span>MUA NGAY</span></button>
+                    </div>
+                </div>
+                <div class="b-banner-slide">
+                    <div class="b-banner-img">
+                        <img src="img/headbanner/hdbanner3.webp" alt="" />
+                    </div>
+                    <div class="b-content">
+                        <h2><span>Sản phẩm mới</span> ĐỒ CHƠI XẾP HÌNH</h2>
+                        <p>Bộ đồ chơi xếp hình đã ra mắt. <a href="">Khám phá ngay!</a></p>
+                        <button class="c-btn1" onclick="showPage('shop')"><span>MUA NGAY</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="b-navigation-button">
+                <span class="dot active" onclick="changeSlide(0)"></span>
+                <span class="dot" onclick="changeSlide(1)"></span>
+                <span class="dot" onclick="changeSlide(2)"></span>
+            </div>
+        </div>
+        <!-- Danh mục của trang -->
+        <div class="s-category">
+            <div class="container">
+                <div class="list-cate">
+                    <div class="product">
+                        <img src="https://thuvienmuasam.com/uploads/default/original/2X/1/157d45f84c8381ec1e2cb714ff1e760d35757880.jpeg" alt="Product 1" />
+                        <div class="overlay">
+                            <h3>Đồ chơi xếp hình</h3>
+                            <p>Xem chi tiết</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://namhoatoys.vn/Data/Sites/1/media/17/do-choi-xep-hinh-khoi-xay-dung-do-choi-go-nam-hoa_1-533x400.jpg" alt="Product 2" />
+                        <div class="overlay">
+                            <h3>Đồ chơi xếp hình</h3>
+                            <p>Xem chi tiết</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://nhutinhyeucuame.com/wp-content/uploads/2022/09/do-choi-the-thao-2.jpg" alt="Product 3" />
+                        <div class="overlay">
+                            <h3>Đồ chơi thể thao</h3>
+                            <p>Xem chi tiết</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="https://cdn.jadiny.vn/do-choi-thu-cong-220677913-d637205375164902083.jpg" alt="Product 4" />
+                        <div class="overlay">
+                            <h3>Thủ công- Mỹ nghệ</h3>
+                            <p>Xem chi tiết</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Danh sách sản phẩm mới, bán chạy của trang -->
+        <div class="s-product">
+            <h2>SẢN PHẨM MỚI</h2>
+            <div class="list">
+                <div class="card">
+                    <img src="Frame 12.png" alt="Mô hình xe tải" />
+                    <button style="background-color: rgb(232, 52, 82); color: white; font-weight: bold; font-size: 18px; border-radius: 20px; text-align: center; display: block; margin: 0 auto">
+                        Mua ngay
+                    </button>
+                    <br />
+                    <h3 style="text-align: center; font-family: Arial, sans-serif; font-size: 22px">Mô hình xe tải</h3>
+                    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 16px">69.999đ</p>
+                </div>
+
+                <div class="card">
+                    <img src="Frame 12 (1).png" alt="Mô hình nhà gỗ" />
+                    <button style="background-color: rgb(232, 52, 82); color: white; font-weight: bold; font-size: 18px; border-radius: 20px; text-align: center; display: block; margin: 0 auto">
+                        Mua ngay
+                    </button>
+                    <br />
+                    <h3 style="text-align: center; font-family: Arial, sans-serif; font-size: 22px">Mô hình nhà gỗ</h3>
+                    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 16px">69.999đ</p>
+                </div>
+
+                <div class="card">
+                    <img src="Frame 12 (2).png" alt="Chiếc xe búp bê" />
+                    <button style="background-color: rgb(232, 52, 82); color: white; font-weight: bold; font-size: 18px; border-radius: 20px; text-align: center; display: block; margin: 0 auto">
+                        Mua ngay
+                    </button>
+                    <br />
+                    <h3 style="text-align: center; font-family: Arial, sans-serif; font-size: 22px">Chiếc xe búp bê</h3>
+                    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 16px">69.999đ</p>
+                </div>
+            </div>
+        </div>
+        <div class="s-product">
+            <h2>SẢN PHẨM BÁN CHẠY</h2>
+            <div class="list">
+                <div class="card">
+                    <img src="Frame 12.png" alt="Mô hình xe tải" />
+                    <button style="background-color: rgb(232, 52, 82); color: white; font-weight: bold; font-size: 18px; border-radius: 20px; text-align: center; display: block; margin: 0 auto">
+                        Mua ngay
+                    </button>
+                    <br />
+                    <h3 style="text-align: center; font-family: Arial, sans-serif; font-size: 22px">Mô hình xe tải</h3>
+                    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 16px">69.999đ</p>
+                </div>
+
+                <div class="card">
+                    <img src="Frame 12 (1).png" alt="Mô hình nhà gỗ" />
+                    <button style="background-color: rgb(232, 52, 82); color: white; font-weight: bold; font-size: 18px; border-radius: 20px; text-align: center; display: block; margin: 0 auto">
+                        Mua ngay
+                    </button>
+                    <br />
+                    <h3 style="text-align: center; font-family: Arial, sans-serif; font-size: 22px">Mô hình nhà gỗ</h3>
+                    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 16px">69.999đ</p>
+                </div>
+
+                <div class="card">
+                    <img src="Frame 12 (2).png" alt="Chiếc xe búp bê" />
+                    <button style="background-color: rgb(232, 52, 82); color: white; font-weight: bold; font-size: 18px; border-radius: 20px; text-align: center; display: block; margin: 0 auto">
+                        Mua ngay
+                    </button>
+                    <br />
+                    <h3 style="text-align: center; font-family: Arial, sans-serif; font-size: 22px">Chiếc xe búp bê</h3>
+                    <p style="text-align: center; font-family: Arial, sans-serif; font-size: 16px">69.999đ</p>
+                </div>
+            </div>
+        </div>
+        <!-- Banner ưu đãi -->
+        <div class="s-sale">
+            <div class="s_sale-text">
+                <p>Giảm giá toàn bộ sản phẩm</p>
+                <h2>Đến hết <span class="day">1</span> Ngày <span class="hour">1</span> Giờ <span class="minute">1</span> Phút <span class="second">1</span></h2>
+                <button class="c-btn1" onclick="showPage('shop')"><span>MUA NGAY</span></button>
+            </div>
+        </div>
+        <!-- ưu điểm của Larana -->
+        <div class="s-advan">
+            <div class="content">
+                <div class="content-img"><img src="giá.png" /></div>
+                <a target="_blank">Giá cả hợp lý</a>
+            </div>
+            <div class="content">
+                <div class="content-img"><img src="giao hàng.png" /></div>
+                <a target="_blank">Giao hàng nhanh chóng</a>
+            </div>
+            <div class="content">
+                <div class="content-img"><img src="sản phẩm.png" /></div>
+                <a target="_blank">Sản phẩm chất lượng</a>
+            </div>
+        </div>
+        <!-- Đánh giá của khách hàng -->
+        <section class="s-testimonial" style="background: #ffefe4">
+            <h2>ĐÁNH GIÁ KHÁCH HÀNG</h2>
+            <div class="content">
+                <div>
+                    <p>Tôi đã mua sản phẩm tại Larana Store, từ sản phẩm đến trải nghiệm mua sắm ở đây là cực kỳ tuyệt vời.</p>
+                    <div>
+                        <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpAQb-eVeVeo1K_VMfVt1geSSYZJcM3LTr7Q&usqp=CAU" />
+                        <div class="k1" style="display: inline-block">
+                            <p>Mai Linh</p>
+                            <p>Khách hàng</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Tôi đã mua sản phẩm tại Larana Store, từ sản phẩm đến trải nghiệm mua sắm ở đây là cực kỳ tuyệt vời.</p>
+                    <div>
+                        <img
+                            class="avatar"
+                            src="data:image/jpeg;base64,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"
+                        />
+                        <div class="k1" style="display: inline-block">
+                            <p>Ngọc Sam</p>
+                            <p>Khách hàng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Đăng ký khách hàng -->
+        <section class="s-form">
+            <h2>ĐĂNG KÍ THÀNH VIÊN</h2>
+            <h3>NHẬN THÔNG BÁO ƯU ĐÃI SỚM NHẤT</h3>
+            <form>
+                <label for="emails">Nhập email của bạn</label>
+                <input type="text" name="emails" />
+            </form>
+        </section>
+        <!-- Footer của trang -->
+        <div class="s-footer">
+            <div class="container">
+                <div class="s_top">
+                    <div class="s_left">
+                        <div class="s_logo"><img src="toy store logo.png" alt="" /></div>
+                        <div class="s_info">
+                            <div class="s_info-detail">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>279 Nguyễn Tri Phương</span>
+                            </div>
+                            <div class="s_info-detail">
+                                <i class="fa-sharp fa-solid fa-envelope"></i>
+                                <span>Larana-toystore@gmail.com</span>
+                            </div>
+                            <div class="s_info-detail">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>(+84) 0902368316</span>
+                            </div>
+                            <div class="s_social">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_mid">
+                        <ul>
+                            <li><a href="home.html">Trang chủ</a></li>
+                            <li><a href="shop.html">Cửa hàng</a></li>
+                            <li><a href="about.html">Về chúng tôi</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="s_right">
+                        <h4>Nhận thông báo</h4>
+                        <p>Nhận những thông báo sớm nhất về những ưu đãi</p>
+                        <div class="s_email">
+                            <input type="text" placeholder="Nhập email" />
+                            <i class="fa-sharp fa-solid fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="s_bottom">
+                    <div class="s_copyright">
+                        <p>Larana.All Rights Reserved</p>
+                    </div>
+                    <div class="s_pay">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-paypal"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
